@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration</title>
+    <% include ../partials/includes.ejs %>
+  </head>
+
+  <body>
+    <div class="container" style="padding:20px 50px 0 30px; max-width: 600px;">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-3">
+          <form id="regForm">
+            <div class="regForm">
+              <div class="fb-text form-group field-text-lastname">
+                <label
+                  class="fb-text-label"
+                  for="text-lastname"
+                  id="text-lastname-label">Last Name</label><span class="req">&nbsp;*</span>
+                <input
+                  type="text"
+                  class="form-control noSpecialChar"
+                  name="text-lastname"
+                  id="text-lastname"
+                  required="required"
+                  value=""/>
+              </div>
+              <div class="fb-number form-group field-number-employeenumber">
+                <label
+                  class="fb-number-label"
+                  for="number-employeenumber"
+                  id="text-employeenumber-label">Employee Number</label><span class="req">&nbsp;*</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="number-employeenumber"
+                  id="number-employeenumber"
+                  title="Your 800 number (or 100 if you're a contractor) must be 9 digits."
+                  required="required"
+                  value=""/>
+              </div>
+              <div class="fb-text form-group field-text-email">
+                <label
+                  class="fb-text-label"
+                  for="text-email"
+                  id="text-email-label">Email</label><span class="req">&nbsp;*</span>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="text-email"
+                  id="text-email"
+                  required="required"
+                  value=""/>
+              </div>
+              <div class="fb-text form-group field-text-email">
+                <label
+                  class="fb-text-label"
+                  for="text-confirmemail"
+                  id="text-confirmemail-label">Confirm Email</label><span class="req">&nbsp;*</span>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="text-confirmemail"
+                  id="text-confirmemail"
+                  required="required"
+                  value=""/>
+              </div>
+              <div class="fb-number form-group field-number-ss">
+                <label
+                  class="fb-number-label"
+                  for="number-ss"
+                  id="number-ss-label">Last 4 of your Social Security Number</label><span class="req">&nbsp;*</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="number-ss"
+                  id="number-ss"
+                  title="Please enter the last 4 of your Social Security Number"
+                  value=""/>
+              </div>
+              <div class="fb-number form-group field-dob">
+                <label class="fb-number-label" for="dob" id="text-dob-label">Date Of Birth</label><span class="req">&nbsp;*</span>
+                <input
+                  class="form-control"
+                  name="dob"
+                  id="dob"
+                  title="Please enter your birthday"
+                  autocomplete="off"
+                  value=""/>
+              </div>
+
+              <div>
+                <br />
+              </div>
+              <div class="checkbox">
+                <input
+                  name="checkbox-tos"
+                  id="checkbox-tos"
+                  value="option-1"
+                  type="checkbox"
+                  style="margin-left: 0px;"
+                  title="You must agree to the terms of service."/>
+                <label for="checkbox-tos" id="text-tos-label">I agree to the </label>
+                <a class="tos" href="https://caesarscorporatehub.com/home/home_disclaimer" id="text-tos2-label">Terms of Service</a>
+                <span class="req">*</span>
+              </div>
+            </div>
+            <input id="source" name="source" type="hidden" value="IGLOOAPP">
+            <input id="siteID" name="siteID" type="hidden" value="CLV">
+            <div class="fb-button form-group field-button-register">
+              <button
+                class="btn btn-primary"
+                id="button-register"
+                name="button-register"
+                style="float:right;"
+                type="submit">
+			  Register
+              </button>
+            </div>
+          </form>
+
+          <p>
+            <br />
+          </p>
+
+          <div class="submission">
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </body>
+</html>

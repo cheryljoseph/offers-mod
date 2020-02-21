@@ -1,0 +1,31 @@
+{
+  "name": "offers-mod",
+  "version": "1.0.0",
+  "description": "offers-mod",
+  "engines": {
+    "node": "10.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheryljoseph/offers-mod.git"
+  },
+  "author": "Cheryl Joseph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheryljoseph/offers-mod/issues"
+  },
+  "homepage": "https://github.com/cheryljoseph/offers-mod#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "crypto-js": "^3.1.9-1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "request": "^2.88.0"
+  }
+}

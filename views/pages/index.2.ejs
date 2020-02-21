@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <title>ADP Payroll Registration</title>
+
+
+
+</head>
+
+<body>
+
+  <style>
+    /* body {background-color: powderblue;}
+        h1   {color: blue;}
+        p    {color: red;} */
+        body {
+          /* font-family: "Gotham", "Montserrat", Helvetica, Arial, sans-serif; */
+          /* font-family: Helvetica,Arial,sans-serif; */
+          /* font-size: 10px; */
+          color: #666;
+          background: #f5f5f5;
+        }
+        .form-group.required .control-label:after {
+          content:"*";
+          color:red;
+        }
+
+        
+        </style>
+
+
+
+  <nav class="navbar navbar-inverse bg-dark">
+    <img src="caesarslogo.png" style="max-width: none;max-height: 60px;">
+  </nav>
+
+  <!-- <nav class="navbar navbar-inverse bg-primary">
+  </nav>
+  
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;"> 
+  </nav> -->
+
+  <div class="container">
+
+    <!-- <nav class="">
+      <a class="navbar-brand" href="#">
+        <img src="images/caesars.png" width="320" height="157" alt="">
+      </a>
+    </nav> -->
+
+
+    <h2 class="ml-4 mt-2 mb-4">ADP Payroll Registration</h2>
+
+    <!-- <form class="needs-validation" novalidate data-toggle="validator">
+         
+      <div class="form-group col-md text-left">
+        <label for="empNumber">800  number</label>
+        <input type="text" class="form-control" id="empNumber" placeholder="800 number" required>
+        <div class="invalid-feedback">
+          Please enter the 800 number.
+        </div>
+      </div>
+      </form> -->
+
+    <div class="col-md-12">
+
+      <div id="start" class="col-md-4" style="display:none;">
+
+        <button id="createAccount" name="createAccount" class="btn btn-primary">Create Account</button>
+      </div>
+
+      <div>
+        <div class="alert alert-primary  col-md-4" role="alert" id="alerts" style="display:none;">
+          This is a primary alert—check it out!
+        </div>
+
+        <div class="alert alert-danger col-md-4" role="alert" id="errors" style="display:none">
+        </div>
+      </div>
+
+
+
+
+      <div id="frm">
+
+
+
+
+        <form class="needs-validation" novalidate data-toggle="validator">
+
+          <div class="form-group col-md-4 text-left required">
+            <label for="lastName" class="control-label font-weight-bold">Last name</label>
+            <input type="text" class="form-control" id="lastName" required>
+            <div class="invalid-feedback font-weight-bold">
+              This field is required.
+            </div>
+          </div>
+
+          <div class="form-group col-md-4 text-left required">
+            <label for="empNumber" class="control-label font-weight-bold">Employee Number</label>
+            <input type="number" class="form-control" id="empNumber" required>
+            <div class="invalid-feedback font-weight-bold">
+              This field is required.
+            </div>
+          </div>
+
+          <!-- <div class="form-group col-md text-left required">
+            <label for="firstName" class="control-label font-weight-bold">First name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+            <div class="invalid-feedback">
+              Please enter the first name.
+            </div>
+          </div> -->
+
+          <div class="form-group col-md-4 text-left required">
+            <label for="emalAddress" class="control-label font-weight-bold">Email</label>
+            <input type="email" class="form-control" id="emalAddress" required>
+            <div class="invalid-feedback font-weight-bold">
+              This field is required.
+            </div>
+          </div>
+
+          <div class="form-group col-md-4 text-left required">
+            <label for="reenterEmalAddress" class="control-label font-weight-bold">Confirm Email</label>
+            <input type="email" class="form-control" id="reenterEmalAddress" required>
+            <div class="invalid-feedback font-weight-bold">
+              This field is required.
+            </div>
+          </div>
+
+          <div class="form-group col-md-4 text-left required">
+            <label for="empNumber" class="control-label font-weight-bold">Last 4 of your Social Security Number</label>
+            <input type="number" class="form-control" id="ssn" required>
+            <div class="invalid-feedback font-weight-bold">
+              This field is required.
+            </div>
+          </div>
+
+          <!-- <div class="form-group col-md-4 text-left required">
+            <label for="dob" class="control-label font-weight-bold">Date of Birth</label>
+            <input type="text" class="form-control" id="dob" required>
+
+            <div class="invalid-feedback font-weight-bold">
+              This field is required.
+            </div>
+          </div> -->
+
+          <div class="form-group col-md-4 text-left required">
+            <label for="dateOfBirth" class="control-label font-weight-bold">Date of Birth</label>
+            <input type="text" class="form-control" id="dateOfBirth" autocomplete="off" required>
+
+            <div class="invalid-feedback font-weight-bold">
+              This field is required.
+            </div>
+          </div>
+
+          <div class="form-group col-md-4 text-left ml-4">
+            <input type="checkbox" class="form-check-input" id="optIn" required>
+            <label class="form-check-label" for="exampleCheck1">I agree to the <a href="inline" style="color:red">Terms
+                of Service</a>.</label>
+            <div class="invalid-feedback font-weight-bold">
+              You must agree to the terms of service
+            </div>
+          </div>
+
+          <div class="form-group row ml-1">
+            <div class="col-md-4 text-left">
+              <button type="submit" class="btn btn-primary" id="registerAccount">Register</button>
+            </div>
+          </div>
+
+
+
+        </form>
+
+
+        <script>
+          // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementsByClassName('needs-validation');
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+        </script>
+      </div>
+
+
+
+    </div>
+
+    <div class="row">
+      <!-- <div class="col-sm" id="message" /> -->
+
+      <div class="alert col-sm d-none" id="message">
+        <!-- alert alert-primary d-none -->
+        Response
+      </div>
+
+      <div id="termsOfService" style="width: 500px; display: none;">
+        <h2>Terms of Service</h2>
+        <p>By visiting this website, you agree that the policies of Caesars Entertainment without regard to principles
+          of conflict laws, will govern these terms of service, or any dispute of any sort that might come between
+          Caesars Entertainment and you, or its business partners and associates.</p>
+      </div>
+      <!-- <div class="col-md-12">
+      <div class="alert alert-primary  col-md-4" role="alert" id="message"> 
+        Response
+      </div>
+    </div> -->
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+
+      $(document).ready(function () {
+        $(function () {
+          $("#dob").datepicker({
+            dateFormat: "yy-mm-dd",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: '1900:+0'
+          });
+          
+        });
+
+        $(function () {
+          $("#dateOfBirth").datepicker({
+            dateFormat: "yy-mm-dd",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: '1900:+0'
+          });
+        });
+
+        $("#createAccount").click(function () {
+
+          $('#start').hide("slow", function () { });
+          $('#frm').show();
+
+        });
+
+        $("#registerButton").click(function () {
+
+          $('#login').hide("slow", function () { });
+          $('#frm').show();
+
+        });
+
+
+
+        $("#backButton").click(function () {
+
+          $('#passwordDiv').hide("slow", function () { });
+          $('#frm').show();
+
+        });
+
+
+        //$("#frm").submit(function (event)
+        //{
+        //  $('#frm').hide("slow", function () { });
+        //  $('#passwordDiv').show();
+
+
+        //  return false;
+        //  ////end
+
+
+        //});
+
+
+        $("#frm").submit(function (event) {
+          //var postData = '{"profile": {"firstName": "Cheryl","lastName": "Joseph","email": "cheryljoseph3@gmail.com","login": "cheryljoseph3@gmail.com"},"credentials": {"password" : { "value": "TwelveTwelve1" }}}';
+
+          $('#errors').css('display', 'none');
+
+          event.preventDefault();
+
+          var submitData = {
+            lastname: $('#lastName').val(),
+            employeenumber: $('#empNumber').val(),
+            email: $('#emalAddress').val(),
+            socialsecurity: $('#ssn').val(),
+            dob: $('#dateOfBirth').val(),
+            optIn: true
+          };
+
+
+          $.ajax({
+            async: true,
+            crossDomain: true,
+            //url: 'https://igloo-reg.azurewebsites.net/api/HttpTrigger1?code=c0pfhDgbn740skrHLEgIZ95Fg4tyanLYEHsEXuI984tMVbxX/NEb3A==',
+            url: '/enroll',
+            method: 'POST',
+            contentType: 'application/json',
+            cache: false,
+            data: JSON.stringify(submitData),
+            success: function (data) {
+              var response = JSON.parse(data);
+              console.log(response);
+              $('#message').text(response.header.resultCode + ' - ' + response.header.resultMessage);
+
+              if (response.header.resultCode == 'CZR-EAS-200') {
+                $('#message').removeClass("d-none alert-danger").addClass("alert-success");  // alert alert-primary d-none 
+              } else {
+                $('#message').removeClass("d-none alert-success").addClass("alert-danger");  // alert alert-primary d-none 
+              }
+
+
+
+              jQuery('.submission').html(data + '<br>' + response.header.resultCode);
+            },
+            error: function (err) {
+              console.log('error:', err)
+            }
+          });
+
+
+        });
+
+
+
+
+      });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
